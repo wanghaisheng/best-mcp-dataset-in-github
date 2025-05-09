@@ -1,0 +1,42 @@
+{
+  "baseUrl": "https://visionboard.heymanifestation.com",
+  "defaultLang": "en",
+  "email":"support@heymanifestation.com",
+  "apptype":"app",
+  "robots": {
+    "allowedBots": [
+      "Googlebot",
+      "Applebot",
+      "Bingbot",
+      "DuckDuckBot",
+      "Yeti",
+      "Twitterbot",
+      "Yandex"
+    ],
+    "blockedBots": [
+      "Baiduspider",
+      "360Spider",
+      "Yisouspider",
+      "Sogouspider"
+    ],
+    "allowedPaths": [
+      "/",
+      "/en",
+      "/zh",
+      "/fr",
+      "/es",
+      "/de"
+    ],
+    "blockedPaths": [
+      "/js",
+      "/scripts",
+      "/lang",
+      "/locale",
+      "/css",
+      "/docs",
+      "/reference",
+      "/template",
+      "/input"
+    ]
+  }
+}
