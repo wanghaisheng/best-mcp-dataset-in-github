@@ -8,6 +8,7 @@ import time
 import argparse
 import re
 from typing import List, Dict, Any, TypedDict
+import datetime
 
 load_dotenv()
 
@@ -155,42 +156,81 @@ def extract_keywords(description: str) -> List[str]:
 
 
 def assign_category(keywords: List[str]) -> str:
-    """Categorizes item based on extracted keywords."""
+    """Categorizes item based on extracted keywords, tailored for MCP servers."""
     if not keywords:
-        return "general"
-    if any(
-        tech in keywords
-        for tech in ["ecommerce", "commerce", "shopify", "vendure", "storefront"]
-    ):
-        return "ecommerce"
-    if any(tech in keywords for tech in ["game", "gaming", "unity", "unreal"]):
-        return "game"
-    if any(
-        tech in keywords
-        for tech in ["ai", "machinelearning", "artificialintelligence", "gpt", "chat"]
-    ):
-        return "ai"
-    if any(tech in keywords for tech in ["saas", "boilerplate", "starter"]):
-        return "saas"
-    return "general"
+        return "general_mcp" # Default category for MCP
+
+    # Prioritize more specific categories
+    if any(k in keywords for k in ["bungeecord", "waterfall", "velocity", "proxy"]):
+        return "proxy"
+    if any(k in keywords for k in ["spigot", "paper", "bukkit", "craftbukkit", "purpur", "airplane"]):
+        return "server_core_bukkit_like"
+    if any(k in keywords for k in ["forge", "minecraftforge", "neoforge"]):
+        return "server_core_forge"
+    if any(k in keywords for k in ["fabric", "fabricmc", "quilt", "quiltmc"]):
+        return "server_core_fabric"
+    if any(k in keywords for k in ["plugin", "addon", "module", "extension", "api"]): # check if it's a plugin for a known platform
+        if any(p in keywords for p in ["spigot", "paper", "bukkit", "bungeecord", "velocity", "forge", "fabric"]):
+            return "plugin_or_mod"
+    if any(k in keywords for k in ["mod", "modpack", "modded"]):
+        return "mod_or_modpack"
+    if any(k in keywords for k in ["tool", "utility", "admin", "management", "panel", "wrapper"]):
+        return "server_utility"
+    if any(k in keywords for k in ["datapack", "resourcepack", "shader"]):
+        return "custom_content"
+
+    # Broader categories
+    if any(k in keywords for k in ["minecraft", "mcp", "mcserver", "server"]):
+        return "general_mcp_server"
+
+    return "other_mcp"
 
 
 def extract_techstack(keywords: List[str], all_keywords: List[str]) -> List[str]:
-    """Extracts techstack from the keywords, using all available keywords."""
+    """Extracts techstack from the keywords, focusing on MCP technologies."""
     tech_stack = []
-    if any(tech in keywords for tech in ["nextjs", "next.js", "next"]):
-        tech_stack.append("nextjs")
-    if any(tech in keywords for tech in ["react", "reactjs", "react.js"]):
-        tech_stack.append("react")
-    if any(tech in keywords for tech in ["python", "django", "flask"]):
+    # Languages
+    if "java" in keywords:
+        tech_stack.append("java")
+    if "kotlin" in keywords:
+        tech_stack.append("kotlin")
+    if "python" in keywords: # Python might be used for wrapper scripts or tools
         tech_stack.append("python")
-    if any(tech in keywords for tech in ["remix"]):
-        tech_stack.append("remix")
-    if any(tech in keywords for tech in ["node", "nodejs", "node.js"]):
-        tech_stack.append("node")
-    if any(tech in keywords for tech in ["laravel", "php"]):
-        tech_stack.append("laravel")
-    return tech_stack
+    if "typescript" in keywords or "javascript" in keywords: # JS/TS for web panels or some plugin systems
+        tech_stack.append("javascript/typescript")
+
+
+    # Server Platforms / APIs
+    if any(k in keywords for k in ["spigot", "spigotmc"]):
+        tech_stack.append("spigot")
+    if any(k in keywords for k in ["paper", "papermc"]):
+        tech_stack.append("paper")
+    if any(k in keywords for k in ["bukkit", "craftbukkit"]):
+        tech_stack.append("bukkit")
+    if any(k in keywords for k in ["forge", "minecraftforge", "neoforge"]):
+        tech_stack.append("forge")
+    if any(k in keywords for k in ["fabric", "fabricmc"]):
+        tech_stack.append("fabric")
+    if any(k in keywords for k in ["quilt", "quiltmc"]):
+        tech_stack.append("quilt")
+
+
+    # Proxies
+    if any(k in keywords for k in ["bungeecord", "waterfall"]):
+        tech_stack.append("bungeecord")
+    if "velocity" in keywords or "velocitypowered" in keywords:
+        tech_stack.append("velocity")
+
+    # Build tools / Other common tech
+    if "maven" in keywords:
+        tech_stack.append("maven")
+    if "gradle" in keywords:
+        tech_stack.append("gradle")
+    if "docker" in keywords:
+        tech_stack.append("docker")
+    
+    # Remove duplicates and return
+    return list(set(tech_stack))
 
 
 def merge_and_save_results(
@@ -269,15 +309,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Load Configuration
-    keywords_str = os.getenv("KEYWORDS_ENV")
-    if keywords_str:
-        keywords_to_search = [
-            keyword.strip() for keyword in keywords_str.split(",") if keyword.strip()
-        ]
-    else:
-        keywords_to_search = []
-        logging.error("No Keywords specified. Please specify via KEYWORDS_ENV.")
-        exit(1)
+    keywords_to_search = ["mcp server"]
 
     github_token = os.getenv("GITHUB_TOKEN")
     try:
@@ -287,7 +319,10 @@ if __name__ == "__main__":
         logging.error(f"Error parsing MIN_STARS or MIN_FORKS env variables: {e}")
         exit(1)
 
-    output_file = Path(os.getenv("OUTPUT_FILE", "results/data.json"))
+    # Create a filename with date suffix
+    date_str = datetime.datetime.now().strftime("%Y-%m-%d")
+    output_filename = f"data_{date_str}.json"
+    output_file = Path(os.getenv("OUTPUT_DIR", "results")) / output_filename
 
     validate_config(min_stars_filter, min_forks_filter)
 
