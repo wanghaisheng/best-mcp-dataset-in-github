@@ -1,5 +1,5 @@
 
-## GitHub 热门 Repo 发现工具：PRD
+## MCP GitHub 热门 Repo 发现工具：PRD
 
 **文档版本：** 1.0
 **日期：** 2025年5月9日

@@ -1,0 +1,53 @@
+{
+  "toolName": "MCP GitHub Popular Repo Discovery Tool",
+  "tagline": "Efficiently discover and analyze popular GitHub repositories.",
+  "description": "A command-line tool to search, collect, and analyze popular and relevant GitHub repositories based on keywords, sorting rules, and filtering conditions. Designed for developers, researchers, and product managers to efficiently discover and evaluate open-source projects.",
+  "features": {
+    "title": "Core Features (MVP)",
+    "keywordSearch": "Keyword Input: Supports searching with one or more keywords.",
+    "scopeLimitation": "Search Scope: Match keywords in repository name, description, README, and Topics.",
+    "sortingOptions": "Sorting Options: By Stars (default), Forks, Last Update, Best Match.",
+    "resultCountControl": "Result Count Control: Specify the number of results to fetch (e.g., top 10, 20, 50, 100).",
+    "dataExtraction": "Key Info Extraction: Extracts name, URL, description, stars, forks, language, update/create times, topics, license.",
+    "outputFormats": "Output Formats: Clear CLI output and CSV file export.",
+    "apiTokenConfig": "GitHub API Token: Configure Personal Access Token (PAT) for higher rate limits.",
+    "cliInterface": "Simple CLI: Use command-line arguments for inputs."
+  },
+  "futureFeatures": {
+    "title": "Future Enhancements",
+    "advancedFiltering": "Advanced Filtering: By language, license, date ranges, star/fork counts, exclude forks, topic matching.",
+    "moreOutputFormats": "Multiple Output Formats: JSON, Markdown.",
+    "interactiveCliGui": "Interactive CLI / Simple GUI: Friendlier interaction methods.",
+    "trendAnalysis": "Repository Trend Analysis: Analyze star growth history, highlight active projects (exploratory).",
+    "saveLoadConfig": "Save/Load Search Config: Save and reuse common search criteria.",
+    "notifications": "Notification Function: Notify on new hot projects for watched criteria (if deployed as a service).",
+    "deepInfoExtraction": "Deeper Info Extraction: Contributor counts, open issues/PRs, last commit time, README preview.",
+    "awesomeListsIntegration": "Awesome Lists Integration: Cross-reference with Awesome Lists.",
+    "deduplicationSuggestion": "Result Deduplication & Similar Project Suggestion: For large results."
+  },
+  "targetUsers": {
+    "title": "Target Users",
+    "developers": "Software Developers/Engineers: Find libraries, frameworks, tools; study code; find projects to contribute to.",
+    "researchersStudents": "Technical Researchers/Students: Find research code, track tech trends.",
+    "productManagersDecisionMakers": "Product Managers/Tech Decision-Makers: Tech selection research, competitor analysis.",
+    "bloggersCreators": "Tech Bloggers/Content Creators: Discover projects to recommend and analyze.",
+    "ossEnthusiasts": "Open Source Community Enthusiasts: Explore new and interesting open source projects."
+  },
+  "labels": {
+    "search": "Search",
+    "keywords": "Keywords",
+    "stars": "Stars",
+    "forks": "Forks",
+    "lastUpdated": "Last Updated",
+    "language": "Language",
+    "license": "License",
+    "description": "Description",
+    "url": "URL",
+    "runScript": "Run Discovery Script",
+    "outputFile": "Output File",
+    "minStars": "Min Stars",
+    "minForks": "Min Forks",
+    "category": "Category",
+    "techStack": "Tech Stack"
+  }
+} 

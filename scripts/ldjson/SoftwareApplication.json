@@ -1,10 +1,12 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "MoodWheel",
-  "applicationCategory": "LifestyleApplication",
-  "operatingSystem": "iOS, Android",
-  "description": "一个基于情绪轮盘意象的情绪探索与记录应用，帮助用户更好地理解、表达和管理情绪。",
+  "name": "MCP GitHub Popular Repo Discovery Tool",
+  "alternateName": "MCP GitHub 热门 Repo 发现工具",
+  "applicationCategory": "DeveloperTool",
+  "operatingSystem": "Cross-platform (Python CLI)",
+  "description": "A command-line tool to search, collect, and analyze popular and relevant GitHub repositories based on keywords, sorting rules, and filtering conditions. Designed for developers, researchers, and product managers to efficiently discover and evaluate open-source projects.",
+  "abstract": "Efficiently discover and analyze popular GitHub repositories for Minecraft (MCP) and other projects. This tool helps users save time, improve discovery quality, and simplify the process of finding relevant codebases.",
   "author": {
     "@type": "Organization",
     "name": "HeyTCM"
@@ -12,29 +14,23 @@
   "publisher": {
     "@type": "Organization",
     "name": "HeyTCM",
-    "url": "{{website.url}}"
+    "url": "https://mcp.deepseek.diy"
+  },
+  "softwareVersion": "1.0",
+  "keywords": "GitHub, repository, search, discovery, mcp, minecraft, developer tool, cli, python, open source, code analysis, popular repositories",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mcp.deepseek.diy"
   },
   "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD"
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "reviewCount": "100"
-  },
-  "screenshot": "{{app.screenshot}}",
-  "softwareVersion": "1.0.0",
-  "downloadUrl": "{{app.downloadUrl}}",
-  "applicationSuite": "MoodWheel Suite",
-  "countriesSupported": "Worldwide",
-  "featureList": [
-    "情绪轮盘导航",
-    "情绪日记记录",
-    "情绪图谱分析",
-    "情绪调节工具",
-    "心情探索地图 (游戏化)"
-  ],
-  "inLanguage": "{{page.lang}}"
+  "inLanguage": ["en", "zh"],
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://mcp.deepseek.diy/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
 }

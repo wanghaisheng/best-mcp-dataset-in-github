@@ -1,8 +1,8 @@
 {
-  "baseUrl": "https://moodwheel.heytcm.com",
+  "baseUrl": "https://mcp.deepseek.diy",
   "defaultLang": "en",
-  "email":"support@heytcm.com",
-  "apptype":"app",
+  "email":"support@deepseek.diy",
+  "apptype":"website",
   "localepath":"locale",
   "robots": {
     "allowedBots": [
@@ -27,13 +27,10 @@
     "blockedPaths": [
       "/js",
       "/scripts",
-      "/lang",
       "/locale",
       "/css",
-      "/docs",
-      "/reference",
-      "/template",
-      "/input"
+      "/temp", 
+      "/data" 
     ]
   }
 }

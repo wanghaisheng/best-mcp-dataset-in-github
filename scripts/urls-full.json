@@ -4,14 +4,9 @@
     ""
   ],
   "urls": [
-    "https://moodwheel.heytcm.com/app/analysis",
-    "https://moodwheel.heytcm.com/app/home",
-    "https://moodwheel.heytcm.com/app/journal",
-    "https://moodwheel.heytcm.com/app/journey",
-    "https://moodwheel.heytcm.com/app/toolkit",
-    "https://moodwheel.heytcm.com/privacy",
-    "https://moodwheel.heytcm.com/terms",
-    "https://moodwheel.heytcm.com/",
-    "https://moodwheel.heytcm.com/index.html"
+    "https://mcp.deepseek.diy/privacy",
+    "https://mcp.deepseek.diy/terms",
+    "https://mcp.deepseek.diy/",
+    "https://mcp.deepseek.diy/index.html"
   ]
 }

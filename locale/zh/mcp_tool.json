@@ -1,0 +1,53 @@
+{
+  "toolName": "MCP GitHub 热门 Repo 发现工具",
+  "tagline": "高效发现和分析热门 GitHub 仓库。",
+  "description": "一个命令行工具，用于根据关键词、排序规则和过滤条件，搜索、收集并分析 GitHub 上的热门和相关仓库。专为开发者、研究人员和产品经理设计，以高效发现和评估开源项目。",
+  "features": {
+    "title": "核心功能 (MVP)",
+    "keywordSearch": "关键词输入：支持使用一个或多个关键词进行搜索。",
+    "scopeLimitation": "搜索范围限定：在仓库名称、描述、README 和 Topics 中匹配关键词。",
+    "sortingOptions": "排序选项：按 Star 数量 (默认)、Fork 数量、最近更新时间、匹配度。",
+    "resultCountControl": "结果数量控制：允许用户指定希望获取的结果数量（例如，前 10, 20, 50, 100 个）。",
+    "dataExtraction": "关键信息提取：提取仓库全名、链接、描述、Star 数、Fork 数、主要语言、更新/创建时间、Topics、许可证。",
+    "outputFormats": "输出格式：清晰的命令行输出和 CSV 文件导出。",
+    "apiTokenConfig": "GitHub API Token 配置：允许用户配置个人访问令牌 (PAT) 以提高 API 调用频率限制。",
+    "cliInterface": "简单的命令行接口 (CLI)：通过命令行参数接收用户输入。"
+  },
+  "futureFeatures": {
+    "title": "未来迭代/高级功能",
+    "advancedFiltering": "高级过滤：按编程语言、License 类型、创建/更新时间范围、Star/Fork 数量范围过滤，排除 Fork 的仓库，根据 Topic 精准匹配或排除。",
+    "moreOutputFormats": "多种输出格式：JSON、Markdown。",
+    "interactiveCliGui": "交互式 CLI / 简单 GUI：提供更友好的交互方式。",
+    "trendAnalysis": "仓库趋势分析：分析 Star 增长历史，高亮近期活跃度高的项目 (探索性)。",
+    "saveLoadConfig": "保存与加载搜索配置：允许用户保存常用的搜索条件，方便重复使用。",
+    "notifications": "通知功能：当关注的搜索条件出现新的热门项目时，发送通知 (如果部署为服务)。",
+    "deepInfoExtraction": "深度信息提取：贡献者数量、Open Issues / Pull Requests 数量、最近一次 Commit 时间、README 文件预览。",
+    "awesomeListsIntegration": "与 Awesome Lists 结合：交叉引用 Awesome Lists 中的项目。",
+    "deduplicationSuggestion": "结果去重与相似项目推荐：对于大型搜索结果。"
+  },
+  "targetUsers": {
+    "title": "目标用户",
+    "developers": "软件开发者/工程师：寻找库、框架、工具；学习代码；发现可贡献项目。",
+    "researchersStudents": "技术研究员/学生：查找研究代码；跟踪技术趋势。",
+    "productManagersDecisionMakers": "产品经理/技术决策者：技术选型调研；了解竞品动态。",
+    "bloggersCreators": "技术博主/内容创作者：发现值得推荐和分析的项目。",
+    "ossEnthusiasts": "开源社区爱好者：探索新的、有趣的开源项目。"
+  },
+  "labels": {
+    "search": "搜索",
+    "keywords": "关键词",
+    "stars": "Star数",
+    "forks": "Fork数",
+    "lastUpdated": "最近更新",
+    "language": "语言",
+    "license": "许可证",
+    "description": "描述",
+    "url": "链接",
+    "runScript": "运行发现脚本",
+    "outputFile": "输出文件",
+    "minStars": "最小Star数",
+    "minForks": "最小Fork数",
+    "category": "分类",
+    "techStack": "技术栈"
+  }
+} 

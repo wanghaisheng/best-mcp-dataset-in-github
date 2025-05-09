@@ -1,48 +1,46 @@
-# MoodWheel - Full Website Introduction
-> MoodWheel is an emotion exploration and recording app based on the imagery of an emotion wheel, designed to help users better understand, express, and manage their emotions. It empowers users to turn every feeling into a resource for personal growth.
+# MCP GitHub Popular Repo Discovery Tool - Website Introduction
+> The MCP GitHub Popular Repo Discovery Tool is a command-line utility designed to help users efficiently find, categorize, and analyze popular GitHub repositories, with a special focus on Minecraft (MCP) projects, but applicable to any keyword-based search.
 
-## Website Background
-MoodWheel was created to provide a dedicated tool for emotional exploration and well-being. It leverages the intuitive concept of an emotion wheel to help users navigate and articulate their feelings, fostering self-awareness and emotional intelligence. The vision is to make emotional understanding accessible and insightful.
+## Website/Tool Background
+This tool was created to address the challenge of sifting through numerous GitHub repositories to find relevant and high-quality projects. It automates the search and data collection process, providing users with structured information including repository names, descriptions, star/fork counts, extracted keywords, and preliminary categorization and tech stack identification. The vision is to simplify the discovery of valuable open-source projects for developers, researchers, and enthusiasts.
 
-## Main URLs (from sitemap.xml)
-- https://moodwheel.heytcm.com/app/home
-  - The main page featuring the interactive MoodWheel for emotion exploration.
-- https://moodwheel.heytcm.com/app/journal
-  - For recording emotional experiences, including intensity, descriptions, and multimedia.
-- https://moodwheel.heytcm.com/app/analysis
-  - Provides analysis of emotion patterns and history through various visualizations.
-- https://moodwheel.heytcm.com/app/journey
-  - A gamified Mood Exploration Map to discover and understand a wide range of emotions.
-- https://moodwheel.heytcm.com/app/toolkit
-  - Offers a toolkit with resources like meditation and exercises for emotion regulation.
-- https://moodwheel.heytcm.com/privacy
-  - Details the application's privacy policy.
-- https://moodwheel.heytcm.com/terms
-  - Outlines the terms of service for using MoodWheel.
+## Main URLs (Conceptual for a future web interface or documentation)
+- `https://mcp.deepseek.diy`
+  - The conceptual homepage for the MCP Hub, potentially hosting documentation or links to the CLI tool and its output data.
+- `https://mcp.deepseek.diy/docs` (Conceptual)
+  - Future location for detailed documentation on how to use the tool, configure it, and understand its output.
+- `https://mcp.deepseek.diy/data/` (Conceptual)
+  - A possible location where generated JSON datasets (like `data_YYYY-MM-DD.json`) could be accessed if the tool is run by a service.
+- `https://mcp.deepseek.diy/privacy`
+  - Details the website's privacy policy.
+- `https://mcp.deepseek.diy/terms`
+  - Outlines the terms of service.
 
-## Content Categories
-### [MoodWheel Emotion Exploration](https://moodwheel.heytcm.com/app/home)
-Interactive wheel navigation to explore emotions layer by layer, from basic feelings to nuanced states.
+## Content Categories (Tool Features)
+### [Keyword-Based GitHub Search](https://mcp.deepseek.diy)
+Performs searches on GitHub for repositories matching user-defined keywords (e.g., "mcp server", "saas boilerplate").
 
-### [Emotion Journaling & Recording](https://moodwheel.heytcm.com/app/journal)
-Log emotions with details like intensity scores, textual descriptions, and optional photo/voice attachments.
+### [Data Extraction & Filtering](https://mcp.deepseek.diy)
+Extracts key information (name, description, URL, stars, forks) and allows filtering by minimum stars and forks.
 
-### [Emotion Pattern Analysis](https://moodwheel.heytcm.com/app/analysis)
-Visualize emotional history and trends using timelines, calendars, or heatmaps to identify patterns and triggers.
+### [Automated Categorization](https://mcp.deepseek.diy)
+Assigns categories to repositories based on keywords found in their descriptions (e.g., "server_core_bukkit_like", "proxy", "plugin_or_mod" for MCP; "ecommerce", "ai", "saas" for general SaaS).
 
-### [Mood Exploration Map](https://moodwheel.heytcm.com/app/journey)
-Engage in a gamified experience to explore and unlock a comprehensive map of emotions.
+### [Tech Stack Identification](https://mcp.deepseek.diy)
+Identifies potential technologies used in the repositories based on keywords (e.g., "java", "spigot", "forge", "python", "nextjs").
 
-### [Emotion Regulation Toolkit](https://moodwheel.heytcm.com/app/toolkit)
-Access a curated set of tools and exercises, such as guided meditations or music, tailored to help manage and balance emotions.
+### [Dated JSON Output](https://mcp.deepseek.diy)
+Saves the collected and processed data into a JSON file with a date suffix (e.g., `results/data_YYYY-MM-DD.json`), allowing for historical tracking and easy integration with other tools.
 
 ## User Value
-- Enhances self-awareness by helping users identify and articulate their emotions accurately.
-- Facilitates emotional understanding and management through structured exploration and recording.
-- Provides insights into personal emotional patterns and triggers for proactive well-being.
-- Offers practical tools and resources for effective emotion regulation.
-- Supports a journey of personal growth by turning emotional experiences into learning opportunities.
+- **Saves Time:** Automates the tedious process of manually searching and evaluating GitHub repositories.
+- **Improves Discovery:** Helps uncover relevant projects, especially in niche areas like MCP server development.
+- **Provides Structured Data:** Outputs categorized and tech-identified repository information in a machine-readable format.
+- **Facilitates Analysis:** Enables users to compare projects, track trends (by comparing dated outputs), and make informed decisions.
+- **Supports Research & Development:** Aids developers in finding tools, libraries, or inspiration, and researchers in gathering data on software projects.
 
-## Technical SEO Enhancements
-- Dynamic injection of SEO meta tags, alternate language links, and LD+JSON structured data for optimal search engine visibility and multilingual support.
-- AI Scraper-friendly configurations and a comprehensive sitemap ensure effective crawling and indexing.
+## Technical SEO / CLI Tool Notes
+- The primary product is a Python command-line (CLI) tool.
+- The website (`https://mcp.deepseek.diy`) serves as a conceptual hub, potentially for documentation, tool download, or access to pre-generated datasets.
+- SEO for the website would focus on discoverability for terms like "GitHub repo discovery tool," "MCP project finder," etc.
+- The tool itself uses the GitHub API and outputs JSON data locally.

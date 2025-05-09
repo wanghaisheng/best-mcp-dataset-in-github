@@ -1,48 +1,46 @@
-# MoodWheel - 网站完整介绍
-> MoodWheel 是一款基于情绪轮盘意象的情绪探索与记录应用，旨在帮助用户更好地理解、表达和管理情绪。它使用户能够将每一种感受都转化为个人成长的资源。
+# MCP GitHub 热门 Repo 发现工具 - 网站介绍
+> MCP GitHub 热门 Repo 发现工具是一个命令行实用程序，旨在帮助用户高效地查找、分类和分析热门的 GitHub 仓库，特别关注 Minecraft (MCP) 项目，但也适用于任何基于关键词的搜索。
 
-## 网站背景
-MoodWheel 的创建旨在为情绪探索和心理健康提供一个专门的工具。它利用情绪轮盘的直观概念，帮助用户导航和清晰表达自己的感受，从而培养自我意识和情商。其愿景是让情绪理解变得易于 erişilebilir (accessible) 和富有洞察力。
+## 网站/工具背景
+创建此工具是为了解决在众多 GitHub 仓库中筛选以找到相关且高质量项目的挑战。它自动化了搜索和数据收集过程，为用户提供结构化的信息，包括仓库名称、描述、Star/Fork 数量、提取的关键词以及初步的分类和技术栈识别。其愿景是为开发者、研究人员和爱好者简化发现有价值开源项目的过程。
 
-## 主要网址说明（根据 sitemap.xml）
-- https://moodwheel.heytcm.com/app/home
-  - 主要页面，以交互式 MoodWheel 为特色，用于情绪探索。
-- https://moodwheel.heytcm.com/app/journal
-  - 用于记录情绪体验，包括强度、描述和多媒体内容。
-- https://moodwheel.heytcm.com/app/analysis
-  - 通过各种可视化方式提供情绪模式和历史分析。
-- https://moodwheel.heytcm.com/app/journey
-  - 一个游戏化的情绪探索地图，用于发现和理解广泛的情绪。
-- https://moodwheel.heytcm.com/app/toolkit
-  - 提供一个包含冥想和练习等资源的工具箱，用于情绪调节。
-- https://moodwheel.heytcm.com/privacy
-  - 详细说明应用程序的隐私政策。
-- https://moodwheel.heytcm.com/terms
-  - 概述使用 MoodWheel 的服务条款。
+## 主要网址 (针对未来 Web 界面或文档的概念性规划)
+- `https://mcp.deepseek.diy`
+  - MCP Hub 的概念性主页，可能托管文档或指向 CLI 工具及其输出数据的链接。
+- `https://mcp.deepseek.diy/docs` (概念性)
+  - 未来用于存放关于如何使用该工具、配置它以及理解其输出的详细文档的位置。
+- `https://mcp.deepseek.diy/data/` (概念性)
+  - 如果工具由服务运行，则生成的 JSON 数据集 (例如 `data_YYYY-MM-DD.json`) 可能会在此处访问。
+- `https://mcp.deepseek.diy/privacy`
+  - 详细说明网站的隐私政策。
+- `https://mcp.deepseek.diy/terms`
+  - 概述服务条款。
 
-## 内容分类详情
-### [MoodWheel 情绪探索](https://moodwheel.heytcm.com/app/home)
-交互式轮盘导航，逐层探索情绪，从基本感觉到细微状态。
+## 内容分类 (工具功能)
+### [基于关键词的 GitHub 搜索](https://mcp.deepseek.diy)
+在 GitHub 上执行搜索，查找与用户定义关键词 (例如，"mcp server"，"saas boilerplate") 匹配的仓库。
 
-### [情绪日记与记录](https://moodwheel.heytcm.com/app/journal)
-记录情绪详情，如强度评分、文字描述以及可选的照片/语音附件。
+### [数据提取与筛选](https://mcp.deepseek.diy)
+提取关键信息 (名称、描述、URL、Star 数、Fork 数) 并允许按最小 Star 数和 Fork 数进行筛选。
 
-### [情绪模式分析](https://moodwheel.heytcm.com/app/analysis)
-使用时间轴、日历或热力图可视化情绪历史和趋势，以识别模式和触发因素。
+### [自动分类](https://mcp.deepseek.diy)
+根据仓库描述中找到的关键词为仓库分配类别 (例如，MCP 的 "server_core_bukkit_like"、"proxy"、"plugin_or_mod"；通用 SaaS 的 "ecommerce"、"ai"、"saas")。
 
-### [心情探索地图](https://moodwheel.heytcm.com/app/journey)
-参与游戏化体验，探索并解锁全面的情绪地图。
+### [技术栈识别](https://mcp.deepseek.diy)
+根据关键词识别仓库中可能使用的技术 (例如，"java"、"spigot"、"forge"、"python"、"nextjs")。
 
-### [情绪调节工具箱](https://moodwheel.heytcm.com/app/toolkit)
-访问一套精选工具和练习，如引导冥想或音乐，旨在帮助管理和平衡情绪。
+### [带日期后缀的 JSON 输出](https://mcp.deepseek.diy)
+将收集和处理的数据保存到带有日期后缀的 JSON 文件中 (例如，`results/data_YYYY-MM-DD.json`)，从而实现历史跟踪并易于与其他工具集成。
 
 ## 用户价值
-- 通过帮助用户准确识别和表达情绪，增强自我意识。
-- 通过结构化的探索和记录，促进情绪理解和管理。
-- 为主动的心理健康提供关于个人情绪模式和触发因素的洞察。
-- 提供实用工具和资源，以实现有效的情绪调节。
-- 通过将情绪体验转化为学习机会，支持个人成长之旅。
+- **节省时间：** 自动化手动搜索和评估 GitHub 仓库的繁琐过程。
+- **改进发现：** 帮助发现相关项目，尤其是在 MCP 服务器开发等利基领域。
+- **提供结构化数据：** 以机器可读的格式输出分类和技术栈识别的仓库信息。
+- **促进分析：** 使用户能够比较项目、跟踪趋势 (通过比较带日期的输出) 并做出明智的决策。
+- **支持研发：** 帮助开发人员找到工具、库或灵感，并帮助研究人员收集有关软件项目的数据。
 
-## 技术 SEO 优化
-- 动态注入 SEO 元标签、备用语言链接和 LD+JSON 结构化数据，以实现最佳搜索引擎可见性和多语言支持。
-- AI Scraper 友好的配置和全面的站点地图确保有效的抓取和索引。
+## 技术 SEO / CLI 工具说明
+- 主要产品是一个 Python 命令行 (CLI) 工具。
+- 网站 (`https://mcp.deepseek.diy`) 作为概念中心，可能用于文档、工具下载或访问预生成的数据集。
+- 网站的 SEO 将侧重于 "GitHub repo 发现工具"、"MCP 项目查找器" 等术语的可发现性。
+- 该工具本身使用 GitHub API 并在本地输出 JSON 数据。

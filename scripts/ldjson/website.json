@@ -1,11 +1,12 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "MoodWheel",
-  "url": "https://moodwheel.heytcm.com",
+  "name": "MCP Hub - GitHub Repo Discovery",
+  "alternateName": "MCP GitHub 热门 Repo 发现中心",
+  "url": "https://mcp.deepseek.diy",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://moodwheel.heytcm.com/search?q={search_term_string}",
+    "target": "https://mcp.deepseek.diy/search?q={search_term_string}",
     "query-input": "required name=search_term_string"
   },
   "publisher": {
@@ -13,11 +14,12 @@
     "name": "HeyTCM",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://moodwheel.heytcm.com/img/logo.svg",
+      "url": "https://mcp.deepseek.diy/img/logo.png",
       "width": 600,
       "height": 60
     }
   },
-  "inLanguage": "{{page.lang}}",
-  "description": "MoodWheel - 一个基于情绪轮盘意象的情绪探索与记录应用，帮助用户更好地理解、表达和管理情绪。"
+  "inLanguage": ["en", "zh"],
+  "description": "MCP Hub provides tools and data for discovering popular and relevant GitHub repositories, especially for Minecraft (MCP) projects. Search, filter, and analyze to find the best open-source projects.",
+  "abstract": "A central hub for discovering and analyzing GitHub repositories related to MCP (Minecraft) and other development projects."
 }
